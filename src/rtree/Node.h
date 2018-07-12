@@ -72,7 +72,7 @@ namespace SpatialIndex
 			virtual bool isIndex() const;
 			virtual bool isLeaf() const;
 
-		private:
+		public:
 			Node();
 			Node(RTree* pTree, id_type id, uint32_t level, uint32_t capacity);
 
