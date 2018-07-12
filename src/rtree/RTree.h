@@ -82,7 +82,7 @@ namespace SpatialIndex
 			virtual void getStatistics(IStatistics** out) const;
 			virtual void flush();
 
-		private:
+		public:
 			void initNew(Tools::PropertySet&);
 			void initOld(Tools::PropertySet& ps);
 			void storeHeader();
