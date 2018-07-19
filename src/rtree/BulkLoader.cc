@@ -327,10 +327,7 @@ void BulkLoader::bulkLoadUsingSTR(
 	uint32_t pageSize,
 	uint32_t numberOfPages
 ) {
-	if (! stream.hasNext())
-		throw Tools::IllegalArgumentException(
-			"RTree::BulkLoader::bulkLoadUsingSTR: Empty data stream given."
-		);
+	if (! stream.hasNext()) return;
 
 	NodePtr n = pTree->readNode(pTree->m_rootID);
 	pTree->deleteNode(n.get());
